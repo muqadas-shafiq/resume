@@ -39,13 +39,13 @@ const Education = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-3xl font-bold text-purple-600 mb-12 text-center"
+        className=" grid gap-8 md:grid-cols-2 max-w-4xl w-full text-3xl font-bold text-purple-600 mb-12 text-center"
       >
         Education
       </motion.h2>
 
       {/* Education Cards */}
-      <div className="flex flex-col-2 gap-8 w-full items-center">
+      <div className="flex flex-col gap-8 w-full items-center">
         {educationData.map((edu, index) => (
           <motion.div
             key={index}
