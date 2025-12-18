@@ -29,23 +29,27 @@ const educationData = [
 
 const Education = () => {
   return (
-    <section
-      id="education"
-      className="py-20 px-6 flex flex-col items-center"
-    >
-      {/* Section Heading */}
+    <section id="education" className="py-20 px-6">
+      {/* Heading */}
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className=" grid gap-8 md:grid-cols-2 max-w-4xl w-full text-3xl font-bold text-purple-600 mb-12 text-center"
+        className="text-3xl font-bold text-purple-600 mb-12 text-center"
       >
         Education
       </motion.h2>
 
-      {/* Education Cards */}
-      <div className="flex flex-col gap-8 w-full items-center">
+      {/* Responsive Grid */}
+      <div
+        className="
+          grid gap-8 max-w-6xl mx-auto
+          grid-cols-1
+          md:grid-cols-2
+          lg:grid-cols-4
+        "
+      >
         {educationData.map((edu, index) => (
           <motion.div
             key={index}
@@ -54,8 +58,7 @@ const Education = () => {
             transition={{ duration: 0.6, delay: index * 0.15 }}
             viewport={{ once: true }}
             className="
-              max-w-xl w-full
-              p-8 rounded-2xl text-center
+              p-6 rounded-2xl text-center
               bg-purple-100 backdrop-blur-xl
               border border-white/30
               shadow-xl
